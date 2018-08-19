@@ -1,0 +1,17 @@
+baseURL = "https://xqzhang2015.github.io/"
+languageCode = "en-us"
+title = "My New Hugo Site: xqzhang2015"
+
+paginate=15
+archive-paginate=15
+
+defaultContentLanguage = "zh-cn"
+[Languages.zh-cn]
+	languageCode = "zh-cn"
+
+#[params.gitment] # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+#	owner = "xqzhang2015"              # Your GitHub ID
+#	repo = "comments"               # The repo to store comments
+#	clientId = "xxxx"           # Your client ID
+#	clientSecret = "xxxx"       # Your client secret
+
