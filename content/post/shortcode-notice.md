@@ -1,10 +1,10 @@
 ---
 title: "Shortcodes Notice Preview"
-date: 2018-03-03T16:01:23+08:00
-lastmod: 2018-03-04T16:01:23+08:00
+date: 2018-08-20 01:17:14
+lastmod: 2018-08-20 01:17:29
 draft: false
 tags: ["preview", "shortcodes", "tag-6"]
-categories: ["docs", "shortcodes", "index"]
+categories: ["docs", "shortcodes", "index", "Data Structure and Algorithm"]
 ---
 
 ## normal use

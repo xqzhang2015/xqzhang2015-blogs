@@ -18,6 +18,13 @@ PygmentsUseClasses = true # Use CSS classes to format highlighted code
 PygmentsCodefencesGuessSyntax = true
 PygmentsOptions = "linenos=table"
 
+# xqzhang2015: taxonomies
+# [taxonomies]
+#  category = "categories"
+
+# xqzhang2015: categories
+categories = ["Syntax Highlighting", "Data Structure and Algorithm", "docs", "shortcodes", "index"]
+
 # language support # en / zh-cn / other... translations present in i18n/
 defaultContentLanguage = "zh-cn"           # Default language to use
 [languages.zh-cn]
