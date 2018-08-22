@@ -48,6 +48,21 @@ A tip disclaimer
 A tip disclaimer
 {{% /notice %}}
 
+### tip-1th
+
+```shortcode
+I am a test code, 1th.
+```
+
+### tip-2th
+
+```shortcode
+I am a test code, 2th.
+```
+
+{{% notice warning %}}
+I am a warning test, 2th
+{{% /notice %}}
 
 ## info
 ```shortcode
