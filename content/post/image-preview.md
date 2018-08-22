@@ -24,6 +24,8 @@ This is an image in `static/image` folder.
 ![This is an image in `static/image` folder.](/image/example.jpg)
 ```
 
+![This is an image in `static/image` folder.](/image/example.jpg)
+
 <!--more-->
 
 ## `{{</* figure */>}}` shortcode
