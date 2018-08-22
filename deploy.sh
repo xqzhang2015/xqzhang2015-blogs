@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # fetch submodules
-git submodule update --init --recursive
+#git submodule update --init --recursive
 # update
 git pull origin master
 
