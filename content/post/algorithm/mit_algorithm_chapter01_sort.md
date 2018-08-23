@@ -136,6 +136,8 @@ void mergeSort(T *data, int n)
 }
 ```
 
+### Result of insertion and merge sort
+
 ```shell
 $:~/docker/tech_stack/program/algorithm(master)$ g++ sort.cpp
 $:~/docker/tech_stack/program/algorithm(master)$ ./a.out
