@@ -14,7 +14,9 @@ categories: [
 ]
 ---
 
-# Sort algorithm
+## Sort algorithm
+
+All kinds of sort algorithms.
 
 ### Insertion sort
 
