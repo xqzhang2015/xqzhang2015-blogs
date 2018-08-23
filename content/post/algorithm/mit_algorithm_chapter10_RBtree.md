@@ -1,5 +1,5 @@
 +++
-title = "MIT：算法导论——10.平衡搜索树-红黑树"
+title = "MIT Algorithm - 10.平衡搜索树-红黑树"
 description = ""
 tags = [
     "C++",

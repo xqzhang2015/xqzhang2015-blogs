@@ -1,5 +1,5 @@
 +++
-title = "MIT：算法导论——7.1.基本数据结构_栈、队列、链表、有根树"
+title = "MIT Algorithm - 7.1.基本数据结构_栈、队列、链表、有根树"
 description = ""
 tags = [
     "C++",

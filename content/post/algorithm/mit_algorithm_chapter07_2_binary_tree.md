@@ -1,5 +1,5 @@
 +++
-title = "MIT：算法导论——7.2.二叉树"
+title = "MIT Algorithm - 7.2.二叉树"
 description = ""
 tags = [
     "C++",

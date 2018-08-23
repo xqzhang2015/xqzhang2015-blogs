@@ -1,5 +1,5 @@
 +++
-title = "MIT：算法导论——9.二叉搜索树"
+title = "MIT Algorithm - 9.二叉搜索树"
 description = ""
 tags = [
     "C++",

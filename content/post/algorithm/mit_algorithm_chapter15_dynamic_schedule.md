@@ -1,5 +1,5 @@
 +++
-title = "MIT：算法导论——15.动态规划"
+title = "MIT Algorithm - 15.动态规划"
 description = ""
 tags = [
     "C++",
