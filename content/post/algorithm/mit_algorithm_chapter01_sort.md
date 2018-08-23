@@ -27,6 +27,7 @@ All kinds of sort algorithms.
 
 using namespace std;
 
+// insert sort
 template <typename T>
 int insertionSort(T *data, int n)
 {
@@ -51,7 +52,7 @@ int main(void)
 	int data[6] = {5, 3, 1, 9, 7, -1};
 
 	insertionSort<int>(data, sizeof(data) / sizeof(*data));
-	for (uint i = 0; i < sizeof(data) / sizeof(*data); i++) {
+	for (unsigned int i = 0; i < sizeof(data) / sizeof(*data); i++) {
 		cout << data[i] << " ";
 	}
 	cout << endl;
@@ -63,7 +64,7 @@ int main(void)
 		vT.push_back(i);
 	}
 	insertionSort<int>(&vT[0], vT.size());
-
+	// mergeSort<int>(&vT[0], vT.size());
 	for (std::vector<int>::iterator it = vT.begin(); it != vT.end(); it++) {
 		cout << *it << " ";
 	}
@@ -71,11 +72,13 @@ int main(void)
 
 	return 0;
 }
+
 ```
 
 ### Merge sort
 
 ```c++
+
 // merge sort
 template <typename T>
 void copy(T *outData, T *data, int left, int right)
@@ -103,11 +106,11 @@ void merge(T *data, T *outData, int left, int mid, int right)
 
 	if (lLoc <= mid) {
 		while (lLoc <= mid) {
-			outData[outLoc++] = data[lLoc];
+			outData[outLoc++] = data[lLoc++];
 		}
 	} else if (rLoc <= right) {
 		while (rLoc <= right) {
-			outData[outLoc++] = data[rLoc];
+			outData[outLoc++] = data[rLoc++];
 		}
 	}
 }
@@ -127,12 +130,24 @@ void mergeSorti(T *data, int left, int right, T *outData)
 template <typename T>
 void mergeSort(T *data, int n)
 {
-	if (data == NULL || n <= 0) {
-		return -1;
-	}
-
 	T *outData = new T[n];
 	mergeSorti(data, 0, n - 1, outData);
 	delete [] outData;
 }
+```
+
+```shell
+$:~/docker/tech_stack/program/algorithm(master)$ g++ sort.cpp
+$:~/docker/tech_stack/program/algorithm(master)$ ./a.out
+-1 1 3 5 7 9
+100
+-1
+110
+-2
+-3
+-9
+0
+0
+-9 -3 -2 -1 0 0 100 110
+
 ```
