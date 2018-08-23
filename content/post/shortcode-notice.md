@@ -4,7 +4,7 @@ date: 2018-08-20 01:17:14
 lastmod: 2018-08-20 01:17:29
 draft: false
 tags: ["preview", "shortcodes", "tag-6"]
-categories: ["docs", "shortcodes", "index", "algorithm"]
+categories: ["docs", "shortcodes", "index"]
 ---
 
 ## normal use
