@@ -13,7 +13,7 @@ categories: [
     "index",
 ]
 ---
-
+# Sort algorithm
 ### Insertion sort
 
 ```c++
@@ -26,18 +26,15 @@ using namespace std;
 template <typename T>
 int insertionSort(T *data, int n)
 {
-	if (data == NULL || n <= 0)
-	{
+	if (data == NULL || n <= 0) {
 		return -1;
 	}
 
-	for (int i = 1; i < n; i++)
-	{
+	for (int i = 1; i < n; i++) {
 		T key = data[i];
 
 		int j = i - 1;
-		for (; j >= 0 && data[j] > key; j--)
-		{
+		for (; j >= 0 && data[j] > key; j--) {
 			data[j + 1] = data[j];
 		}
 		data[j + 1] = key;
@@ -50,8 +47,7 @@ int main(void)
 	int data[6] = {5, 3, 1, 9, 7, -1};
 
 	insertionSort<int>(data, sizeof(data) / sizeof(*data));
-	for (uint i = 0; i < sizeof(data) / sizeof(*data); i++)
-	{
+	for (uint i = 0; i < sizeof(data) / sizeof(*data); i++) {
 		cout << data[i] << " ";
 	}
 	cout << endl;
@@ -59,13 +55,12 @@ int main(void)
 	std::vector<int> vT;
 	int i;
 
-	while (cin >> i)
-	{
+	while (cin >> i) {
 		vT.push_back(i);
 	}
 	insertionSort<int>(&vT[0], vT.size());
-	for (std::vector<int>::iterator it = vT.begin(); it != vT.end(); it++)
-	{
+
+	for (std::vector<int>::iterator it = vT.begin(); it != vT.end(); it++) {
 		cout << *it << " ";
 	}
 	cout << endl;
@@ -128,6 +123,10 @@ void mergeSorti(T *data, int left, int right, T *outData)
 template <typename T>
 void mergeSort(T *data, int n)
 {
+	if (data == NULL || n <= 0) {
+		return -1;
+	}
+
 	T *outData = new T[n];
 	mergeSorti(data, 0, n - 1, outData);
 	delete [] outData;
