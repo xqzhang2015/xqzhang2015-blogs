@@ -6,7 +6,7 @@ tags: [
     "templates",
 ]
 date: "2014-06-03 17:30:06"
-lastmod: "2018-08-23 21:59:19"
+lastmod: "2018-08-27 11:02:45"
 categories: [
     "algorithm",
     "C++",
@@ -156,7 +156,7 @@ $:~/docker/tech_stack/program/algorithm(master)$ ./a.out
 
 ### Merge sort: a better one -- half copy and using for iteration
 
-```
+```C++
 template <typename T>
 void mergeSortBetteri(T *data, T *outData, int n, int step)
 {
