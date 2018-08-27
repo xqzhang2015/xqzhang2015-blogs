@@ -20,6 +20,7 @@ All kinds of sort algorithms.
 
 ### Insertion sort
 
+{{% more code %}}
 ```c++
 #include <iostream>
 #include <vector>
@@ -74,9 +75,11 @@ int main(void)
 }
 
 ```
+{{% /more %}}
 
 ### Merge sort
 
+{{% more code %}}
 ```c++
 
 // merge sort
@@ -135,9 +138,12 @@ void mergeSort(T *data, int n)
 	delete [] outData;
 }
 ```
+{{% /more %}}
+
 
 ### Result of insertion and merge sort
 
+{{% more code %}}
 ```shell
 $:~/docker/tech_stack/program/algorithm(master)$ g++ sort.cpp
 $:~/docker/tech_stack/program/algorithm(master)$ ./a.out
@@ -153,9 +159,11 @@ $:~/docker/tech_stack/program/algorithm(master)$ ./a.out
 -9 -3 -2 -1 0 0 100 110
 
 ```
+{{% /more %}}
 
 ### Merge sort: a better one -- half copy and using for iteration
 
+{{% more code %}}
 ```C++
 template <typename T>
 void mergeSortBetteri(T *data, T *outData, int n, int step)
@@ -195,6 +203,8 @@ void mergeSortBetter(T *data, int n)
 	delete [] outData;
 }
 ```
+{{% /more %}}
+
 
 ### Reference
 
