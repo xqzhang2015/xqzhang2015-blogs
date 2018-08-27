@@ -153,3 +153,45 @@ $:~/docker/tech_stack/program/algorithm(master)$ ./a.out
 -9 -3 -2 -1 0 0 100 110
 
 ```
+
+### Merge sort: a better one -- half copy and using for iteration
+
+```
+template <typename T>
+void mergeSortBetteri(T *data, T *outData, int n, int step)
+{
+	for (int left = 0; left < n; left += 2 * step)
+	{
+		int mid = left + step;
+		if (mid >= n) {
+			mid = n - 1;
+		}
+
+		int right = left + 2 * step - 1;
+		if (right >= n) {
+			right = n - 1;
+		}
+		merge(data, outData, left, mid - 1, right);
+	}
+}
+
+template <typename T>
+void mergeSortBetter(T *data, int n)
+{
+	T *outData = new T[n];
+	int step = 1;
+	while (step < n)
+	{
+		mergeSortBetteri(data, outData, n, step);
+		step <<= 1;
+
+		if (step >= n) {
+			copy(outData, data, 0, n - 1); // copy back
+			break;
+		}
+		mergeSortBetteri(outData, data, n, step);
+		step <<= 1;
+	}
+	delete [] outData;
+}
+```
