@@ -195,3 +195,15 @@ void mergeSortBetter(T *data, int n)
 	delete [] outData;
 }
 ```
+
+### Reference
+
+[www.cnblogs.com: 常用排序算法总结](https://www.cnblogs.com/eniac12/p/5329396.html)<br/>
+
+[]()<br/>
+
+[]()<br/>
+
+[]()<br/>
+
+[]()<br/>
