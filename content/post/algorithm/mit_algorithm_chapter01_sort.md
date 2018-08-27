@@ -198,9 +198,9 @@ void mergeSortBetter(T *data, int n)
 
 ### Reference
 
-[www.cnblogs.com: 常用排序算法总结](https://www.cnblogs.com/eniac12/p/5329396.html)<br/>
+[cnblogs: 常用排序算法总结](https://www.cnblogs.com/eniac12/p/5329396.html)<br/>
 
-[]()<br/>
+[csdn: MIT 算法导论](https://blog.csdn.net/loveprogram_1/article/details/28596195)<br/>
 
 []()<br/>
 
