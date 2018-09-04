@@ -1,21 +1,24 @@
 ---
-title: "The journal of debug lightty access log not appending issue"
+title: "The journal of debug lightty access log not appending"
 description: ""
 tags: [
     "C++",
 ]
-date: "2018-09-04 11:42:31"
+date: "2018-09-03 11:42:31"
 lastmod: "2018-09-04 11:42:57"
 categories: [
-	"architecture",
+	"arch",
     "web server",
     "linux",
-    "arch",
     "C++",
 ]
 ---
 
 ## What I learned
+### Why O_APPEND is needed: multiple process write the same file
+
+![This is an image in `static/image` folder.](/image/linux_write_same_file.jpg)
+
 
 ### fcntl(fd, F_SETFL, O_NONBLOCK);
 
@@ -156,3 +159,50 @@ x~/docker/test$ ll access.log
 ~/docker/test$ lsattr access.log
 -----a---------- access.log
 ```
+
+## UML: user mode linux
+
+This figure depicts a conceptual layout of UML in relation to the hardware, host kernel and user-space.
+
+![This is an image in `static/image` folder.](/image/uml1.jpg)
+
+
+### GDB with UML
+
+1. 运行UML并确认其对应的进程 
+
+打开一终端，使用./linux ubda=../Debian-Wheezy-AMD64-root_fs mem=256m命令运行起UML后，再打开另一终端，并运行 `ps uf | grep linux | grep -v grep | grep -v git` 命令，会有如下输出：
+
+```shell
+userA@slam:~$ ps uf | grep linux | grep -v grep | grep -v git
+userA 7160 4.2 1.7 276996 36476 pts/5 S+ 16:05 0:17 \_ ./linux ubda=../Debian-Wheezy-AMD64-root_fs mem=256m
+userA 7167 0.0 1.7 276996 36476 pts/5 S+ 16:05 0:00 \_ ./linux ubda=../Debian-Wheezy-AMD64-root_fs mem=256m
+userA 7168 0.0 1.7 276996 36476 pts/5 S+ 16:05 0:00 \_ ./linux ubda=../Debian-Wheezy-AMD64-root_fs mem=256m
+userA 7169 0.0 1.7 276996 36476 pts/5 S+ 16:05 0:00 \_ ./linux ubda=../Debian-Wheezy-AMD64-root_fs mem=256m
+userA 7170 0.0 0.0 15528 972 pts/5 t+ 16:05 0:00 \_ ./linux ubda=../Debian-Wheezy-AMD64-root_fs mem=256m
+...
+```
+从上面的输出内容可知对应主进程的PID为7160。 
+
+2. 连接调试
+
+使用GDB连接上已运行的UML环境并进行调试尝试。在新打开的另一终端输入如下命令：
+
+```shell
+sudo gdb -p 7160
+```
+
+在上面的(gdb)后面运行指令set follow-fork-mode parent，确保等会gdb一直在该进程，即在fork创建新的子进程后继续调试父进程，子进程不受影响。
+
+接下来，在(gdb)后面继续运行指令break sys_clone创建一个断点，此时会输出如下内容：
+
+```shell
+(gdb) break sys_clone
+Breakpoint 1 at 0x6003526d: file kernel/fork.c, line 1679.
+```
+
+接下来在运行起来的UML里输入命令ls -l，会有如下内容输出：
+```shell
+root@changeme:~# ls -l
+```
+
