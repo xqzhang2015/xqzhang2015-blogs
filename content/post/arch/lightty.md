@@ -17,8 +17,10 @@ categories: [
 ## What I learned
 ### Why O_APPEND is needed: multiple process write the same file
 
-![This is an image in `static/image` folder.](/image/linux_write_same_file.jpg)
+* O_APPEND
 
+1. Before each write(2), the file offset is positioned at the end of the file, as if with lseek(2).
+2. The modification of the file offset and the write operation are performed as a single atomic step.
 
 ### fcntl(fd, F_SETFL, O_NONBLOCK);
 
@@ -31,6 +33,17 @@ With it, we could GDB linux system call.
 [CSDN: UML(User Mode Linux) -- built binaries](https://blog.csdn.net/kaikai_sk/article/details/79614842)<br/>
 
 [阿里云: User mode Linux -- self generate](https://www.aliyun.com/jiaocheng/174196.html)<br/>
+
+## file operation: write
+
+### file system layout
+
+![This is an image in `static/image` folder.](/image/linux_file_system.png)
+
+### multiple process write the same file
+This figure could explain why O_APPEND is needed.
+
+![This is an image in `static/image` folder.](/image/linux_write_same_file.jpg)
 
 ## SYSTEM call
 

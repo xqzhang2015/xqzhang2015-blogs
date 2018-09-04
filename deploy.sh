@@ -5,11 +5,11 @@
 # update
 git pull origin master
 
-if [ $# -lt  1 ]; then
-    echo "$0 <commit message>"
-    exit 1
-fi
-msg="$1"
+#if [ $# -lt  1 ]; then
+#    echo "$0 <commit message>"
+#    exit 1
+#fi
+msg="${1:-\"update\"}"
 
 git commit -m "${msg}" .
 if [ $? -ne 0 ]; then
