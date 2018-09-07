@@ -48,7 +48,7 @@ exit 0
 ### crontab knowledge
 
 
-##### Format
+##### Job format
 By default, nnCron uses the enhanced format.
 
 The following graph shows what it consists of:
@@ -64,7 +64,7 @@ The following graph shows what it consists of:
 +------------ Minute            (range: 0-59)
 ```
 
-##### Crontab Commands
+##### Crontab commands
 
 export EDITOR=vi ;to specify a editor to open crontab file.
 
