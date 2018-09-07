@@ -2,10 +2,11 @@
 title: "The journal of linux logrotate"
 description: ""
 tags: [
-    "C++",
+    "arch",
+    "linux"
 ]
-date: "2018-09-03 11:42:31"
-lastmod: "2018-09-04 11:42:57"
+date: "2018-09-06 11:42:31"
+lastmod: "2018-09-07 11:42:57"
 categories: [
 	"arch",
     "web server",
