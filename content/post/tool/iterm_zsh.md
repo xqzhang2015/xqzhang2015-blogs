@@ -75,6 +75,12 @@ ZSH_THEME="agnoster"
 plugins=(
   git
 )
+
+# ...
+
+# optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
+# DEFAULT_USER=$(whoami)
+DEFAULT_USER=xqzhang
 ```
 
 * zsh folder structure
