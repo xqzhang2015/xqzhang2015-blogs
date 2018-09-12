@@ -23,6 +23,7 @@ brew cask install iterm2
 or [Download](http://www.iterm2.com/downloads.html) and install iTerm2
 
 * Set solarized-dark color
+
 ```shell
 Preferences > Profiles > Colors:
 Color Presets > Solarized Dark
