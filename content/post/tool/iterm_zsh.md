@@ -109,5 +109,30 @@ ls ~/.oh-my-zsh/themes/
 agnoster.zsh-theme robbyrussell.zsh-theme ...
 ```
 
+### Zsh custom plugins
+
+#### zsh-autosuggestions
+
+[Fish](http://fishshell.com/)-like autosuggestions for zsh. It suggests commands as you type, based on command history.
+
+
+1. Clone this repository into $ZSH_CUSTOM/plugins (by default .oh-my-zsh/custom/plugins)
+
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside .zshrc):
+
+```shell
+plugins=(
+  zsh-autosuggestions
+)
+```
+
+3. Start a new terminal session.
+
+
+#### Other plugins
 
 
