@@ -15,7 +15,7 @@ categories: [
 
 ## iTerm2 + zsh
 
-### Install powerline/fonts to support zsh/theme
+### Install powerline/fonts
 
 powerline/fonts: Patched fonts for Powerline users. Here we install it to support agnoster.zsh-theme.
 
@@ -23,7 +23,6 @@ powerline/fonts: Patched fonts for Powerline users. Here we install it to suppor
 
 Install by git-clone and run install.sh
 
-{{% more code %}}
 ```shell
 # clone
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -34,7 +33,6 @@ cd fonts
 cd ..
 rm -rf fonts
 ```
-{{% /more %}}
 
 ### iTerm2 preference configuration
 
