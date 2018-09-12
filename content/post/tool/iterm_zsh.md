@@ -21,7 +21,7 @@ powerline/fonts: Patched fonts for Powerline users. Here we install it to suppor
 
 [powerline/fonts git repo](https://github.com/powerline/fonts)
 
-Install by git-clone and run install.sh
+* Install by git-clone and run install.sh
 
 ```shell
 # clone
@@ -64,7 +64,7 @@ exec /usr/bin/zsh --login
 
 #### zsh conf: .zshrc
 
-Update zsh theme in .zshrc
+* Update zsh theme in .zshrc
 
 ```shell
 # ZSH_THEME="robbyrussell"
@@ -77,7 +77,7 @@ plugins=(
 )
 ```
 
-zsh folder structure
+* zsh folder structure
 
 ```shell
 ls ~/.oh-my-zsh/
