@@ -38,8 +38,10 @@ rm -rf fonts
 
 ![This is an image in `static/image` folder.](/image/iterm2_preferences.png)
 
-To test if your terminal and font support agnoster.zsh-theme, check that all the necessary characters are supported by copying the following command to your terminal: echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
-
+To test if your terminal and font support agnoster.zsh-theme, check that all the necessary characters are supported by copying the following command to your terminal: 
+```shell
+echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
+```
 ### Install zsh
 
 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) is a framework for managing your zsh configuration.
