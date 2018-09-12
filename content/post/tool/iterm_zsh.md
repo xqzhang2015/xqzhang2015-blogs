@@ -15,6 +15,19 @@ categories: [
 
 ## iTerm2 + zsh
 
+### Install iTerm2
+
+```shell
+brew cask install iterm2
+```
+or [Download](http://www.iterm2.com/downloads.html) and install iTerm2
+
+* Set solarized-dark color
+```
+Preferences > Profiles > Colors:
+Color Presets > Solarized Dark
+```
+
 ### Install powerline/fonts
 
 powerline/fonts: Patched fonts for Powerline users. Here we install it to support agnoster.zsh-theme.
