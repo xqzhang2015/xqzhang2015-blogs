@@ -27,7 +27,7 @@ test
 cron.d/       cron.daily/   cron.deny     cron.hourly/  cron.monthly/ crontab       cron.weekly/
 ```
 
-* logrotate
+* logrotate calling
 
 ```
 [root@xxx cron.daily]# pwd
@@ -41,6 +41,44 @@ if [ $EXITVALUE != 0 ]; then
     /usr/bin/logger -t logrotate "ALERT exited abnormally with [$EXITVALUE]"
 fi
 exit 0
+```
+
+### Logrotate manual
+
+```
+NAME
+       logrotate ‐ rotates, compresses, and mails system logs
+
+SYNOPSIS
+       logrotate [-dv] [-f|--force] [-s|--state file] config_file ..
+
+OPTIONS
+       -d, --debug
+              Turns on debug mode and implies -v.  In debug mode, no changes will be made to the logs or to the logrotate state file.
+
+       -f, --force
+              Tells logrotate to force the rotation, even if it doesn't think this is necessary.
+
+       -m, --mail <command>
+       -s, --state <statefile>
+
+       +-v, --verbose
+              Turns on verbose mode.       
+```
+
+##### Logrotate configuration file
+
+* Sample
+```shell
+"/var/log/httpd/access.log" /var/log/httpd/error.log {
+   rotate 5
+   mail www@my.org
+   size 100k
+   sharedscripts
+   postrotate
+       /usr/bin/killall -HUP httpd
+   endscript
+}
 ```
 
 ## Knowledge
