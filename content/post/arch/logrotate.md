@@ -160,5 +160,21 @@ export EDITOR=vi ;to specify a editor to open crontab file.
 0 0 * * 3 *                         Each Wednesday at midnight
 ```
 
+##### How to check crontab logs
 
+```shell
+sudo tail /var/log/cron
+
+sudo tail /var/mail/$USER
+```
+
+```shell
+Oct 30 14:59:03 ip-10-206-29-116 crontab[7218]: (ec2-user) REPLACE (ec2-user)
+Oct 30 14:59:07 ip-10-206-29-116 crontab[7242]: (ec2-user) LIST (ec2-user)
+Oct 30 15:00:01 ip-10-206-29-116 crond[2620]: (ec2-user) RELOAD (/var/spool/cron/ec2-user)
+Oct 30 15:00:01 ip-10-206-29-116 CROND[7478]: (ec2-user) CMD (cd /home/ec2-user/xxx && ./user_cmd.sh)
+Oct 30 15:01:01 ip-10-206-29-116 CROND[7753]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 30 15:01:01 ip-10-206-29-116 run-parts(/etc/cron.hourly)[7753]: starting 0anacron
+Oct 30 15:01:01 ip-10-206-29-116 run-parts(/etc/cron.hourly)[7762]: finished 0anacron
+```
 
